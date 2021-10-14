@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa5e3368-497b-425a-a86d-d8214ca586e1" name="Default Changelist" comment="" />
+    <list default="true" id="aa5e3368-497b-425a-a86d-d8214ca586e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Go Documentation/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Go Documentation/src/Go Blog/Language/Error handling and Go /main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/20_Interfaces/ref/Go Data Structures: Interfaces /usage.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/20_Interfaces/ref/How to use interfaces in Go/interfaces1.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/20_Interfaces/ref/How to use interfaces in Go/interfaces2.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/20_Interfaces/ref/How to use interfaces in Go/interfaces3.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +26,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.16/libexec" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1zRic0x5AgIhpYHJxfigRBOAADs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,28 +43,28 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
-    <configuration name="go build channel-buffering.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build interfaces3.go">
+    <configuration name="go build interfaces2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/24_Channel Buffering/channel-buffering.go" />
+      <filePath value="$PROJECT_DIR$/src/20_Interfaces/ref/How to use interfaces in Go/interfaces2.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build channel-directions.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build interfaces3.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/26_Channel Directions/channel-directions.go" />
+      <filePath value="$PROJECT_DIR$/src/20_Interfaces/ref/How to use interfaces in Go/interfaces3.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build channel-synchronization.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/25_Channel Synchronization/channel-synchronization.go" />
+      <filePath value="$PROJECT_DIR$/src/20_Interfaces/ref/How to use interfaces in Go/main.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -76,11 +86,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build interfaces3.go" />
+        <item itemvalue="Go Build.go build interfaces2.go" />
+        <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build select.go" />
-        <item itemvalue="Go Build.go build channel-directions.go" />
-        <item itemvalue="Go Build.go build channel-synchronization.go" />
-        <item itemvalue="Go Build.go build channel-buffering.go" />
       </list>
     </recent_temporary>
   </component>
@@ -100,22 +110,22 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="1048" y="243" key="#go_build_73__main.go_(2)/0.0.1680.1050@0.0.1680.1050" timestamp="1634117533163" />
-    <state width="668" height="266" key="GridCell.Tab.0.bottom" timestamp="1634186033844">
+    <state width="1638" height="266" key="GridCell.Tab.0.bottom" timestamp="1634216957449">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="668" height="266" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1634186033844" />
-    <state width="668" height="266" key="GridCell.Tab.0.center" timestamp="1634186033843">
+    <state width="1638" height="266" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1634216957449" />
+    <state width="1638" height="266" key="GridCell.Tab.0.center" timestamp="1634216957447">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="668" height="266" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1634186033843" />
-    <state width="668" height="266" key="GridCell.Tab.0.left" timestamp="1634186033842">
+    <state width="1638" height="266" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1634216957447" />
+    <state width="1638" height="266" key="GridCell.Tab.0.left" timestamp="1634216957446">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="668" height="266" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1634186033842" />
-    <state width="668" height="266" key="GridCell.Tab.0.right" timestamp="1634186033843">
+    <state width="1638" height="266" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1634216957446" />
+    <state width="1638" height="266" key="GridCell.Tab.0.right" timestamp="1634216957448">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="668" height="266" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1634186033843" />
+    <state width="1638" height="266" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1634216957448" />
     <state width="668" height="364" key="GridCell.Tab.1.bottom" timestamp="1634142480096">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
