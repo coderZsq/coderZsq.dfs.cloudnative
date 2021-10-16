@@ -1,4 +1,4 @@
-# Cloud-Native Diary
+# Cloud Native Diary
 
 ## Oct 16, 2021
 

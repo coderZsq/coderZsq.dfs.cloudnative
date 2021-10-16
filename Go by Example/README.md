@@ -1,13 +1,14 @@
 ## Go by Example
 
-- https://gobyexample.com/
+- [Go by Example](https://gobyexample.com/)
 
 ## Reference
 
-- https://go.dev/blog/slices-intro
-- https://go.dev/blog/error-handling-and-go
-- https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go
-- https://research.swtch.com/interfaces
+- [Go Slices: usage and internals - go.dev](https://go.dev/blog/slices-intro)
+- [Error handling and Go - go.dev](https://go.dev/blog/error-handling-and-go)
+- [how-to-use-interfaces-in-go - jordan orelli](https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go)
+- [research!rsc: Go Data Structures: Interfaces (swtch.com)](https://research.swtch.com/interfaces)
+- [Frequently Asked Questions (FAQ) - The Go Programming Language (golang.org)](https://golang.org/doc/faq#closures_and_goroutines)
 
 ### Interface Values
 
