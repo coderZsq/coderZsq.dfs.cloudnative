@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa5e3368-497b-425a-a86d-d8214ca586e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/37_Atomic Counters/atomic-counters.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/38_Mutexes/mutexes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/39_Stateful Goroutines/stateful-goroutines.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/40_Sorting/sorting.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/41_Sorting by Functions/41_sorting-by-functions.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/36_Rate Limiting/rate-limiting.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/36_Rate Limiting/rate-limiting.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/39_Stateful Goroutines/stateful-goroutines.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/39_Stateful Goroutines/stateful-goroutines.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,20 +45,12 @@
       <recent name="$PROJECT_DIR$/src/30_Closing Channels" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build mutexes.go">
+  <component name="RunManager" selected="Go Build.go build sorting.go">
     <configuration name="go build atomic-counters.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/src/37_Atomic Counters/atomic-counters.go" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Go by Example" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/35_WaitGroups/ref/What happens with closures running as goroutines?/main.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -79,21 +70,29 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build waitgroups.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build sorting.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/35_WaitGroups/waitgroups.go" />
+      <filePath value="$PROJECT_DIR$/src/40_Sorting/sorting.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build stateful-goroutines.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go by Example" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/39_Stateful Goroutines/stateful-goroutines.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build mutexes.go" />
+        <item itemvalue="Go Build.go build sorting.go" />
         <item itemvalue="Go Build.go build atomic-counters.go" />
+        <item itemvalue="Go Build.go build mutexes.go" />
+        <item itemvalue="Go Build.go build stateful-goroutines.go" />
         <item itemvalue="Go Build.go build rate-limiting.go" />
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build waitgroups.go" />
       </list>
     </recent_temporary>
   </component>
@@ -117,22 +116,22 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="536" y="243" key="#go_build_usage.go/0.0.1680.1050@0.0.1680.1050" timestamp="1634267277626" />
-    <state width="688" height="270" key="GridCell.Tab.0.bottom" timestamp="1634372854161">
+    <state width="688" height="270" key="GridCell.Tab.0.bottom" timestamp="1634440020271">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="688" height="270" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1634372854161" />
-    <state width="688" height="270" key="GridCell.Tab.0.center" timestamp="1634372854159">
+    <state width="688" height="270" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1634440020271" />
+    <state width="688" height="270" key="GridCell.Tab.0.center" timestamp="1634440020270">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="688" height="270" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1634372854159" />
-    <state width="688" height="270" key="GridCell.Tab.0.left" timestamp="1634372854159">
+    <state width="688" height="270" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1634440020270" />
+    <state width="688" height="270" key="GridCell.Tab.0.left" timestamp="1634440020269">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="688" height="270" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1634372854159" />
-    <state width="688" height="270" key="GridCell.Tab.0.right" timestamp="1634372854160">
+    <state width="688" height="270" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1634440020269" />
+    <state width="688" height="270" key="GridCell.Tab.0.right" timestamp="1634440020271">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="688" height="270" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1634372854160" />
+    <state width="688" height="270" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1634440020271" />
     <state width="668" height="364" key="GridCell.Tab.1.bottom" timestamp="1634142480096">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
