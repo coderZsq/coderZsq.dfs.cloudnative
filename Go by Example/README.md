@@ -5,14 +5,12 @@
 ## Reference
 
 - [Go Slices: usage and internals - go.dev](https://go.dev/blog/slices-intro)
-
 - [Error handling and Go - go.dev](https://go.dev/blog/error-handling-and-go)
-
 - [how-to-use-interfaces-in-go - jordan orelli](https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go)
-
+- [research!rsc: Go Data Structures (swtch.com)](https://research.swtch.com/godata)
 - [research!rsc: Go Data Structures: Interfaces (swtch.com)](https://research.swtch.com/interfaces)
-
 - [Frequently Asked Questions (FAQ) - The Go Programming Language (golang.org)](https://golang.org/doc/faq#closures_and_goroutines)
+- [Strings, bytes, runes and characters in Go - go.dev](https://go.dev/blog/strings)
 
 ## Go Data Structures - research!rsc
 
