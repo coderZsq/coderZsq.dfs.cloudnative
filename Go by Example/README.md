@@ -11,6 +11,7 @@
 - [research!rsc: Go Data Structures: Interfaces (swtch.com)](https://research.swtch.com/interfaces)
 - [Frequently Asked Questions (FAQ) - The Go Programming Language (golang.org)](https://golang.org/doc/faq#closures_and_goroutines)
 - [Strings, bytes, runes and characters in Go - go.dev](https://go.dev/blog/strings)
+- [JSON and Go - go.dev](https://go.dev/blog/json)
 
 ## Go Data Structures - research!rsc
 
