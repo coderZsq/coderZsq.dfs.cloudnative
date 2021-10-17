@@ -8,7 +8,7 @@
 
 熟练使用的编程语言是: Objective-C、JavaScript、Java。
 
-掌握使用的编程语言还包括: Swift、C++、C、汇编、HTML、CSS、JavaScript、TypeScript、Python、Go、SQL 等等。
+掌握使用的编程语言还包括: Swift、C++、C、汇编、HTML、CSS、TypeScript、Python、Go、SQL 等等。
 
 掌握使用的框架包括: UIKit、React、Vue、Spring Framework 等等。
 

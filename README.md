@@ -8,7 +8,7 @@ Current technology stack includes: iOS, front-end, Java back-end, and product de
 
 Proficient in programming languages: Objective-C, JavaScript, Java.
 
-Other programming languages I have mastered include: Swift, C++, C, Assembly, HTML, CSS, JavaScript, TypeScript, Python, Go, SQL, etc.
+Other programming languages I have mastered include: Swift, C++, C, Assembly, HTML, CSS, TypeScript, Python, Go, SQL, etc.
 
 Master the use of frameworks including: UIKit, React, Vue, Spring Framework and so on.
 
