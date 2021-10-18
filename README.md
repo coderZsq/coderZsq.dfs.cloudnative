@@ -2,7 +2,7 @@
 
 ## Oct 18, 2021
 
-Completed Go by Examples, practiced all the examples (see the [code repository](https://github.com/coderZsq/coderZsq.dfs.cloudnative/tree/main/Go%20by%20Example)), read the related I have translated an English document about the principles of Go's underlying data structures (. /Go%20by%20Example/README.md), and drew a brain map to organize and retrieve it. Next, I started learning Go 101.
+I finished Go by Examples, practiced all the examples (see the [code repository](https://github.com/coderZsq/coderZsq.dfs.cloudnative/tree/main/Go%20by%20Example)), read the references, translated an [English document](./Go%20by%20Example/README.md) about Go's underlying data structure principles, and drew a brain map for memorization and retrieval. Next, I started learning Go 101.
 
 ## Oct 16, 2021
 
