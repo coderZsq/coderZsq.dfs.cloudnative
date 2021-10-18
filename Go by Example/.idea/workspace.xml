@@ -2,7 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa5e3368-497b-425a-a86d-d8214ca586e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/50_XML/xml.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/51_Time/time.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/52_Epoch/epoch.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/53_Formatting-Parsing/time-formatting-parsing.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/54_Random Numbers/random-numbers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/55_Number Parsing/number-parsing.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/56_URL Parsing/url-parsing.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/57_SHA1 Hashes/sha1-hashes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/58_Base64 Encoding/base64-encoding.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/59_Reading Files/reading-files.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/60_Writing Files/writing-files.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/61_Line Filters/line-filters.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/62_File Paths/file-paths.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/63_Directories/directories.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/64_Temporary Files and Directories/temporary-files-and-directories.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/65_Testing/testing_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/66_Command-Line Arguments/command-line-arguments.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/67_Command-Line Flags/command-line-flags.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/68_Command-Line Subcommands/command-line-subcommands.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/69_Environment Variables/environment-variables.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/70_HTTP Clients/http-clients.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/71_HTTP Servers/http-servers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/72_Context/context-in-http-servers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/73_Spawning Processes/spawning-processes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/74_Exec'ing Processes/execing-processes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/75_Signals/signals.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/76_Exit/exit.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/49_JSON/ref/JSON and Go/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/49_JSON/ref/JSON and Go/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,54 +71,61 @@
       <recent name="$PROJECT_DIR$/src/30_Closing Channels" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (1)">
-    <configuration name="go build 01  json.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build exit.go">
+    <configuration name="go build context-in-http-servers.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/49_JSON/json.go" />
+      <filePath value="$PROJECT_DIR$/src/72_Context/context-in-http-servers.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build json.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build execing-processes.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/49_JSON/json.go" />
+      <filePath value="$PROJECT_DIR$/src/74_Exec'ing Processes/execing-processes.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build exit.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/49_JSON/ref/JSON and Go/main.go" />
+      <filePath value="$PROJECT_DIR$/src/76_Exit/exit.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build regular-expressions.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build signals.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/48_Regular Expressions/regular-expressions.go" />
+      <filePath value="$PROJECT_DIR$/src/75_Signals/signals.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build string-formatting.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build spawning-processes.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go by Example" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/47_String Formatting/string-formatting.go" />
+      <filePath value="$PROJECT_DIR$/src/73_Spawning Processes/spawning-processes.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Build.go build context-in-http-servers.go" />
+      <item itemvalue="Go Build.go build spawning-processes.go" />
+      <item itemvalue="Go Build.go build execing-processes.go" />
+      <item itemvalue="Go Build.go build signals.go" />
+      <item itemvalue="Go Build.go build exit.go" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go (1)" />
-        <item itemvalue="Go Build.go build json.go" />
-        <item itemvalue="Go Build.go build 01  json.go" />
-        <item itemvalue="Go Build.go build regular-expressions.go" />
-        <item itemvalue="Go Build.go build string-formatting.go" />
+        <item itemvalue="Go Build.go build exit.go" />
+        <item itemvalue="Go Build.go build signals.go" />
+        <item itemvalue="Go Build.go build execing-processes.go" />
+        <item itemvalue="Go Build.go build spawning-processes.go" />
+        <item itemvalue="Go Build.go build context-in-http-servers.go" />
       </list>
     </recent_temporary>
   </component>
@@ -98,6 +133,14 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="490" y="34" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634539251084">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="490" y="34" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1634539251084" />
+    <state x="1038" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1634537030764">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1038" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1634537030764" />
     <state x="1036" y="243" key="#go_build_01__json.go" timestamp="1634477921314">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -118,22 +161,22 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="536" y="243" key="#go_build_usage.go/0.0.1680.1050@0.0.1680.1050" timestamp="1634267277626" />
-    <state width="613" height="363" key="GridCell.Tab.0.bottom" timestamp="1634484925491">
+    <state width="613" height="286" key="GridCell.Tab.0.bottom" timestamp="1634542481662">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="613" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1634484925491" />
-    <state width="613" height="363" key="GridCell.Tab.0.center" timestamp="1634484925489">
+    <state width="613" height="286" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1634542481662" />
+    <state width="613" height="286" key="GridCell.Tab.0.center" timestamp="1634542481661">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="613" height="363" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1634484925489" />
-    <state width="613" height="363" key="GridCell.Tab.0.left" timestamp="1634484925488">
+    <state width="613" height="286" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1634542481661" />
+    <state width="613" height="286" key="GridCell.Tab.0.left" timestamp="1634542481661">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="613" height="363" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1634484925488" />
-    <state width="613" height="363" key="GridCell.Tab.0.right" timestamp="1634484925490">
+    <state width="613" height="286" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1634542481661" />
+    <state width="613" height="286" key="GridCell.Tab.0.right" timestamp="1634542481662">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="613" height="363" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1634484925490" />
+    <state width="613" height="286" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1634542481662" />
     <state width="668" height="364" key="GridCell.Tab.1.bottom" timestamp="1634142480096">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -150,9 +193,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="668" height="364" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1634142480095" />
-    <state x="980" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1634480697450">
+    <state x="980" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1634541875678">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="980" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1634480697450" />
+    <state x="980" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1634541875678" />
   </component>
 </project>

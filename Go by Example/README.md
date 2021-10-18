@@ -1,6 +1,7 @@
 ## Go by Example
 
 - [Go by Example](https://gobyexample.com/)
+- [Go by Example 中文版 (gobyexample-cn.github.io)](https://gobyexample-cn.github.io/)
 
 ## Reference
 

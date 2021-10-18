@@ -10,7 +10,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"math"
+	"os"
 )
 
 // Given the Go data structure, Message,
@@ -80,7 +82,7 @@ func init() {
 	// Or, if the underlying type is unknown, a type switch determines the type:
 	switch v := i.(type) {
 	case int:
-		fmt.Println("twice i is", v* 2)
+		fmt.Println("twice i is", v*2)
 	case float64:
 		fmt.Println("the reciprocal of is", 1/v)
 	case string:
@@ -134,4 +136,60 @@ func init() {
 	// In this way you can work with unknown JSON data while still enjoying the benefits of type safety.
 }
 
+// Let’s define a Go type to contain the data from the previous example:
+type FamilyMember struct {
+	Name    string
+	Age     int
+	Parents []string
+}
+
+// Reference Types
+func init() {
+	b := []byte(`{"Name": "Wednesday", "Age": 6, "Parents": ["Gomez", "Morticia"]}`)
+	var m FamilyMember
+	err := json.Unmarshal(b, &m)
+	fmt.Printf("%+v, err: %v\n", m, err)
+	// Unmarshaling that data into a FamilyMember value works as expected, but if we look closely we can see a remarkable thing has happened. With the var statement we allocated a FamilyMember struct, and then provided a pointer to that value to Unmarshal, but at that time the Parents field was a nil slice value. To populate the Parents field, Unmarshal allocated a new slice behind the scenes. This is typical of how Unmarshal works with the supported reference types (pointers, slices, and maps).
+	// Consider unmarshaling into this data structure:
+	//type Foo struct {
+	//	Bar *Bar
+	//}
+	// If there were a Bar field in the JSON object, Unmarshal would allocate a new Bar and populate it. If not, Bar would be left as a nil pointer.
+	// From this a useful pattern arises: if you have an application that receives a few distinct message types, you might define “receiver” structure like
+	//type IncomingMessage struct {
+	//	Cmd *Command
+	//	Msg *Message
+	//}
+	// and the sending party can populate the Cmd field and/or the Msg field of the top-level JSON object, depending on the type of message they want to communicate. Unmarshal, when decoding the JSON into an IncomingMessage struct, will only allocate the data structures present in the JSON data. To know which messages to process, the programmer need simply test that either Cmd or Msg is not nil.
+}
+
+// Streaming Encoders and Decoders
+func init() {
+	// The json package provides Decoder and Encoder types to support the common operation of reading and writing streams of JSON data. The NewDecoder and NewEncoder functions wrap the io.Reader and io.Writer interface types.
+	// func NewDecoder(r io.Reader) *Decoder
+	// func NewEncoder(w io.Writer) *Encoder
+	// Here’s an example program that reads a series of JSON objects from standard input, removes all but the Name field from each object, and then writes the objects to standard output:
+	dec := json.NewDecoder(os.Stdin)
+	enc := json.NewEncoder(os.Stdout)
+	for {
+		var v map[string]interface{}
+		if err := dec.Decode(&v); err != nil {
+			log.Println(err)
+			return
+		}
+		for k := range v{
+			if k != "Name" {
+				delete(v, k)
+			}
+		}
+		if err := enc.Encode(&v); err != nil {
+			log.Println(err)
+		}
+	}
+	// Due to the ubiquity of Readers and Writers, these Encoder and Decoder types can be used in a broad range of scenarios, such as reading and writing to HTTP connections, WebSockets, or files.
+
+}
+// References
+
+// For more information see the json package documentation. For an example usage of json see the source files of the jsonrpc package.
 func main() {}
