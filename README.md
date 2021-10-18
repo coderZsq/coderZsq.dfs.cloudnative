@@ -1,5 +1,9 @@
 # Cloud Native Diary
 
+## Oct 18, 2021
+
+Completed Go by Examples, practiced all the examples (see the [code repository](https://github.com/coderZsq/coderZsq.dfs.cloudnative/tree/main/Go%20by%20Example)), read the related I have translated an English document about the principles of Go's underlying data structures (. /Go%20by%20Example/README.md), and drew a brain map to organize and retrieve it. Next, I started learning Go 101.
+
 ## Oct 16, 2021
 
 My name is Zhu Shuangquan, I am currently working in a company of China Resources Group. I graduated in 2013 and have 8 years of work experience so far, with 5 years of technical and 2 years of product experience, not majoring in computer science.
