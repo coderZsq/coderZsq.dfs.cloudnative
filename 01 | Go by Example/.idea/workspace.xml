@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aa5e3368-497b-425a-a86d-d8214ca586e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Go 101/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/.idea/Go101.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/Go 101.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/src/01_go-toolchain/simplest-go-program.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/src/02_basic-code-elements-introduction/basic-code-element-demo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/src/03_keywords-and-identifiers/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/src/04_basic-types-and-value-literals/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go 101/src/05_constants-and-variables/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/.idea/Go by Example.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/Go by Example.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/01_Hello World/hello-world" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/01_Hello World/hello-world.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/02_Values/values.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/03_Variables/variables.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/04_Constants/constant.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/05_For/for.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/06_If-Else/if-else.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/07_Switch/switch.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/08_Arrays/arrays.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/09_Slices/ref/Go Slices: usage and internals/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/09_Slices/ref/Go Slices: usage and internals/slices.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/09_Slices/slices.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/10_Maps/maps.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/11_Range/range.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/12_Functions/functions.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/13_Multiple Return Values/multiple-retrun-values.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/14_Variadic Functions/variadic-functions.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/15_Closures/closures.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/16_Recursion/recursion.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/17_Pointers/pointers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/18_Structs /structs.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/19_Methods/methods.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/20_Interfaces/interfaces.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/20_Interfaces/ref/Go Data Structures: Interfaces /x.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/20_Interfaces/ref/Go Data Structures: Interfaces /x.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/20_Interfaces/ref/How to use interfaces in Go/interfaces1.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/20_Interfaces/ref/How to use interfaces in Go/interfaces2.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/20_Interfaces/ref/How to use interfaces in Go/interfaces3.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/21_Errors/errors.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/21_Errors/ref/Error handling and Go /main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/22_Goroutines/goroutines.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/23_Channels/channels.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/24_Channel Buffering/channel-buffering.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/25_Channel Synchronization/channel-synchronization.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/26_Channel Directions/channel-directions.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/27_Select/select.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/28_Timeouts/timeouts.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/29_Non-Blocking Channel Operations/non-blocking-channel-operations.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/30_Closing Channels/closing-channels.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/31_Range over Channels/range-over-channels.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/32_Timers/timers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/33_Tickers/tickers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/34_Worker Pools/worker-pools.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/35_WaitGroups/ref/What happens with closures running as goroutines?/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/35_WaitGroups/waitgroups.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/36_Rate Limiting/rate-limiting.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/37_Atomic Counters/atomic-counters.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/38_Mutexes/mutexes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/39_Stateful Goroutines/stateful-goroutines.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/40_Sorting/sorting.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/41_Sorting by Functions/41_sorting-by-functions.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/42_Panic/panic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/43_Defer/defer.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/44_Recover/recover.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/45_Collection Functions/collection-functions.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/46_String Functions/ref/Strings, bytes, runes and characters in Go /main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/46_String Functions/string-functions.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/47_String Formatting/string-formatting.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/48_Regular Expressions/regular-expressions.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/49_JSON/json.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/49_JSON/ref/JSON and Go/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/50_XML/xml.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/51_Time/time.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/52_Epoch/epoch.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/53_Formatting-Parsing/time-formatting-parsing.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/54_Random Numbers/random-numbers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/55_Number Parsing/number-parsing.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/56_URL Parsing/url-parsing.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/57_SHA1 Hashes/sha1-hashes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/58_Base64 Encoding/base64-encoding.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/59_Reading Files/reading-files.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/60_Writing Files/writing-files.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/61_Line Filters/line-filters.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/62_File Paths/file-paths.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/63_Directories/directories.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/64_Temporary Files and Directories/temporary-files-and-directories.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/65_Testing/testing_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/66_Command-Line Arguments/command-line-arguments" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/66_Command-Line Arguments/command-line-arguments.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/67_Command-Line Flags/command-line-flags" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/67_Command-Line Flags/command-line-flags.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/68_Command-Line Subcommands/command-line-subcommands" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/68_Command-Line Subcommands/command-line-subcommands.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/69_Environment Variables/environment-variables.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/70_HTTP Clients/http-clients.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/71_HTTP Servers/http-servers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/72_Context/context-in-http-servers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/73_Spawning Processes/spawning-processes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/74_Exec'ing Processes/execing-processes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/75_Signals/signals.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/76_Exit/exit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Go by Example/src/76_Exit/exit.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../The Go Programming Language/Go程序设计语言.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.16/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1zRic0x5AgIhpYHJxfigRBOAADs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/21_Errors/ref" />
+      <recent name="$PROJECT_DIR$/src/09_Slices/ref" />
+      <recent name="$PROJECT_DIR$/src/30_Closing Channels" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build exit.go">
+    <configuration name="go build context-in-http-servers.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go by Example" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/72_Context/context-in-http-servers.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build execing-processes.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go by Example" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/74_Exec'ing Processes/execing-processes.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build exit.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go by Example" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/76_Exit/exit.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build signals.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go by Example" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/75_Signals/signals.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build spawning-processes.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go by Example" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/73_Spawning Processes/spawning-processes.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build context-in-http-servers.go" />
+      <item itemvalue="Go Build.go build spawning-processes.go" />
+      <item itemvalue="Go Build.go build execing-processes.go" />
+      <item itemvalue="Go Build.go build signals.go" />
+      <item itemvalue="Go Build.go build exit.go" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build exit.go" />
+        <item itemvalue="Go Build.go build signals.go" />
+        <item itemvalue="Go Build.go build execing-processes.go" />
+        <item itemvalue="Go Build.go build spawning-processes.go" />
+        <item itemvalue="Go Build.go build context-in-http-servers.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="640" y="362" key="#Go_Modules" timestamp="1634819505574">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="640" y="362" key="#Go_Modules/0.0.1680.1050@0.0.1680.1050" timestamp="1634819505574" />
+    <state x="490" y="34" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634539251084">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="490" y="34" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1634539251084" />
+    <state x="1038" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1634537030764">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1038" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1634537030764" />
+    <state x="1036" y="243" key="#go_build_01__json.go" timestamp="1634477921314">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1036" y="243" key="#go_build_01__json.go/0.0.1680.1050@0.0.1680.1050" timestamp="1634477921314" />
+    <state x="1048" y="243" key="#go_build_73__main.go" timestamp="1634117457129">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1048" y="243" key="#go_build_73__main.go/0.0.1680.1050@0.0.1680.1050" timestamp="1634117457129" />
+    <state x="1048" y="243" key="#go_build_73__main.go_(1)" timestamp="1634117501890">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1048" y="243" key="#go_build_73__main.go_(1)/0.0.1680.1050@0.0.1680.1050" timestamp="1634117501890" />
+    <state x="1048" y="243" key="#go_build_73__main.go_(2)" timestamp="1634117533163">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1048" y="243" key="#go_build_73__main.go_(2)/0.0.1680.1050@0.0.1680.1050" timestamp="1634117533163" />
+    <state x="536" y="243" key="#go_build_usage.go" timestamp="1634267277626">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="536" y="243" key="#go_build_usage.go/0.0.1680.1050@0.0.1680.1050" timestamp="1634267277626" />
+    <state width="613" height="286" key="GridCell.Tab.0.bottom" timestamp="1634542481662">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="613" height="286" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1634542481662" />
+    <state width="613" height="286" key="GridCell.Tab.0.center" timestamp="1634542481661">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="613" height="286" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1634542481661" />
+    <state width="613" height="286" key="GridCell.Tab.0.left" timestamp="1634542481661">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="613" height="286" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1634542481661" />
+    <state width="613" height="286" key="GridCell.Tab.0.right" timestamp="1634542481662">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="613" height="286" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1634542481662" />
+    <state width="668" height="364" key="GridCell.Tab.1.bottom" timestamp="1634142480096">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="668" height="364" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1634142480096" />
+    <state width="668" height="364" key="GridCell.Tab.1.center" timestamp="1634142480095">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="668" height="364" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1634142480095" />
+    <state width="668" height="364" key="GridCell.Tab.1.left" timestamp="1634142480093">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="668" height="364" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1634142480093" />
+    <state width="668" height="364" key="GridCell.Tab.1.right" timestamp="1634142480095">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="668" height="364" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1634142480095" />
+    <state x="980" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1634541875678">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="980" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1634541875678" />
+  </component>
+</project>
