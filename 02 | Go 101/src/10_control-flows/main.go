@@ -24,11 +24,11 @@ func init() {
 	}
 
 	n := rand.Int() % 2 // 此n不是上面声明的n
-	if n % 2 == 0 {
+	if n%2 == 0 {
 		fmt.Println("一个偶数。")
 	}
 
-	if ; n % 2 != 0 {
+	if ;n%2 != 0 {
 		fmt.Println("一个奇数。")
 	}
 }
@@ -115,7 +115,7 @@ func init() {
 
 func init() {
 	for i := 0; i < 10; i++ {
-		if i % 2 == 0 {
+		if i%2 == 0 {
 			continue
 		}
 		fmt.Print(i)
@@ -138,7 +138,7 @@ func init() {
 
 func init() {
 	rand.Seed(time.Now().UnixNano())
-	switch n := rand.Intn(100); n%9 {
+	switch n := rand.Intn(100); n % 9 {
 	case 0:
 		fmt.Println(n, "is a multiple of 9.")
 
@@ -192,6 +192,151 @@ func init() {
 	default:
 		fmt.Println(n)
 		//fallthrough // error: 不能出现在最后一个分支中
+	}
+}
+
+func init() {
+	switch n := 5; n {
+	}
+
+	switch 5 {
+	}
+
+	switch _ = 5; {
+	}
+
+	switch {
+	}
+}
+
+func init() {
+	switch { // <=> switch true {
+	case true:
+		fmt.Println("hello")
+	default:
+		fmt.Println("bye")
+	}
+}
+
+func init() {
+	switch n := rand.Intn(3); n {
+	case 0:
+		fmt.Println("n == 0")
+	case 1:
+		fmt.Println("n == 1")
+	default:
+		fmt.Println("n == 2")
+	}
+
+	switch n := rand.Intn(3); n {
+	default:
+		fmt.Println("n == 2")
+	case 0:
+		fmt.Println("n == 0")
+	case 1:
+		fmt.Println("n == 1")
+	}
+
+	switch n := rand.Intn(3); n {
+	case 0:
+		fmt.Println("n == 0")
+	default:
+		fmt.Println("n == 2")
+	case 1:
+		fmt.Println("n == 1")
+	}
+}
+
+func init() {
+	i := 0
+
+Next: // 跳转标签声明
+
+	fmt.Println(i)
+	i++
+	if i < 5 {
+		goto Next // 跳转
+	}
+}
+
+func init() {
+	//goto Label1 // error
+	//{
+	//Label1:
+	//	goto Label2 // error
+	//}
+	//{
+	//Label2:
+	//}
+}
+
+func init() {
+//	i := 0
+//Next:
+//	if i >= 5 {
+//		// error: goto Exit jumps over declaration of k
+//		goto Exit
+//	}
+//
+//	k := i + i
+//	fmt.Println(k)
+//	i++
+//	goto Next
+//Exit: // 此标签声明在k的作用域内，但
+//	// 它的使用在k的作用域之外。
+}
+
+func init() {
+	i := 0
+Next:
+	if i >= 5 {
+		goto Exit
+	}
+	// 创建一个显式代码块以缩小k的作用域。
+	{
+		k := i + i
+		fmt.Println(k)
+	}
+	i++
+	goto Next
+Exit:
+}
+
+func init() {
+	var k int // 将变量k的声明移到此处。
+	i := 0
+Next:
+	if i >= 5 {
+		goto Exit
+	}
+
+	k = i + i
+	fmt.Println(k)
+	i++
+	goto Next
+Exit:
+}
+
+func FindSmallestPrimeLargerThan(n int) int {
+Outer:
+	for n++; ; n++{
+		for i := 2; ; i++ {
+			switch {
+			case i * i > n:
+				break Outer
+			case n % i == 0:
+				continue Outer
+			}
+		}
+	}
+	return n
+}
+
+func init() {
+	for i := 90; i < 100; i++ {
+		n := FindSmallestPrimeLargerThan(i)
+		fmt.Print("最小的比", i, "大的素数为", n)
+		fmt.Println()
 	}
 }
 
