@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 	"unsafe"
 )
 
@@ -178,9 +179,9 @@ func init() {
 	var s []int
 	var m map[string]int
 
-	fmt.Println(a == a)   // true
-	fmt.Println(m == nil) // true
-	fmt.Println(s == nil) // true
+	fmt.Println(a == a)                  // true
+	fmt.Println(m == nil)                // true
+	fmt.Println(s == nil)                // true
 	fmt.Println(nil == map[string]int{}) // false
 	fmt.Println(nil == []int{})          // false
 
@@ -214,9 +215,9 @@ func init() {
 	a := [3]int{-1, 0, 1}
 	s := []bool{true, false}
 	m := map[string]int{"abc": 123, "xyz": 789}
-	fmt.Println (a[2], s[1], m["abc"])    // 读取
+	fmt.Println(a[2], s[1], m["abc"])     // 读取
 	a[2], s[1], m["abc"] = 999, true, 567 // 修改
-	fmt.Println (a[2], s[1], m["abc"])    // 读取
+	fmt.Println(a[2], s[1], m["abc"])     // 读取
 
 	n, present := m["hello"]
 	fmt.Println(n, present, m["hello"]) // 0 false 0
@@ -246,7 +247,7 @@ func init() {
 }
 
 func init() {
-	m0 := map[int]int{0:7, 1:8, 2:9}
+	m0 := map[int]int{0: 7, 1: 8, 2: 9}
 	m1 := m0
 	m1[0] = 2
 	fmt.Println(m0, m1) // map[0:2 1:8 2:9] map[0:2 1:8 2:9]
@@ -346,7 +347,7 @@ func init() {
 }
 
 func init() {
-	type T struct{age int}
+	type T struct{ age int }
 	mt := map[string]T{}
 	mt["John"] = T{age: 29} // 整体修改是允许的
 	ma := map[int][5]int{}
@@ -365,7 +366,7 @@ func init() {
 }
 
 func init() {
-	type T struct{age int}
+	type T struct{ age int }
 	mt := map[string]T{}
 	mt["John"] = T{age: 29}
 	ma := map[int][5]int{}
@@ -431,7 +432,390 @@ func init() {
 	var _ = (*A)(w)      // okay
 	var _ = P(w)         // okay
 
-	var _ = (*[4]int)(z) // 会产生恐慌
+	//var _ = (*[4]int)(z) // 会产生恐慌
+}
+
+func init() {
+	type Ta []int
+	type Tb []int
+	dest := Ta{1, 2, 3}
+	src := Tb{5, 6, 7, 8, 9}
+	n := copy(dest, src)
+	fmt.Println(n, dest) // 3 [5 6 7]
+	n = copy(dest[1:], dest)
+	fmt.Println(n, dest) // 2 [5 5 6]
+
+	a := [4]int{} // 一个数组
+	n = copy(a[:], src)
+	fmt.Println(n, a) // 4 [5 6 7 8]
+	n = copy(a[:], a[2:])
+	fmt.Println(n, a) // 2 [7 8 7 8]
+}
+
+// 假设元素类型为T。
+//func Copy(dest, src []T) int {
+//	if len(dest) < len(src) {
+//		_ = append(dest[:0], src[:len(dest)]...)
+//		return len(dest)
+//	} else {
+//		_ = append(dest[:0], src...)
+//		return len(src)
+//	}
+//}
+
+func init() {
+	m := map[string]int{"C": 1972, "C++": 1983, "Go": 2009}
+	for lang, year := range m {
+		fmt.Printf("%v: %v \n", lang, year)
+	}
+
+	a := [...]int{2, 3, 5, 7, 11}
+	for i, prime := range a {
+		fmt.Printf("%v: %v \n", i, prime)
+	}
+
+	s := []string{"go", "defer", "goto", "var"}
+	for i, keyword := range s {
+		fmt.Printf("%v: %v \n", i, keyword)
+	}
+}
+
+func init() {
+	//// 忽略键值循环变量。
+	//for _, element = range aContainer {
+	//	// ...
+	//}
+	//
+	//// 忽略元素循环变量。
+	//for key, _ = range aContainer {
+	//	element = aContainer[key]
+	//	// ...
+	//}
+	//
+	//// 舍弃元素循环变量。此形式和上一个变种等价。
+	//for key = range aContainer {
+	//	element = aContainer[key]
+	//	// ...
+	//}
+	//
+	//// 键值和元素循环变量均被忽略。
+	//for _, _ = range aContainer {
+	//	// 这个变种形式没有太大实用价值。
+	//}
+	//
+	//// 键值和元素循环变量均被舍弃。此形式和上一个变种等价。
+	//for range aContainer {
+	//	// 这个变种形式没有太大实用价值。
+	//}
+}
+
+func init() {
+	type Person struct {
+		name string
+		age  int
+	}
+	persons := [2]Person{{"Alice", 28}, {"Bob", 25}}
+	for i, p := range persons {
+		fmt.Println(i, p)
+		// 此修改将不会体现在这个遍历过程中，
+		// 因为被遍历的数组是persons的一个副本。
+		persons[1].name = "Jack"
+
+		// 此修改不会反映到persons数组中，因为p
+		// 是persons数组的副本中的一个元素的副本。
+		p.age = 31
+	}
+	fmt.Println("persons:", &persons)
+}
+
+func init() {
+	type Person struct {
+		name string
+		age  int
+	}
+	// 改为一个切片。
+	persons := []Person{{"Alice", 28}, {"Bob", 25}}
+	for i, p := range persons {
+		fmt.Println(i, p)
+		// 这次，此修改将反映在此次遍历过程中。
+		persons[1].name = "Jack"
+		// 这个修改仍然不会体现在persons切片容器中。
+		p.age = 31
+	}
+	fmt.Println("persons:", &persons)
+}
+
+func init() {
+	langs := map[struct{ dynamic, strong bool }]map[string]int{
+		{true, false}:  {"JavaScript": 1995},
+		{false, true}:  {"Go": 2009},
+		{false, false}: {"C": 1972},
+	}
+	// 此映射的键值和元素类型均为指针类型。
+	// 这有些不寻常，只是为了讲解目的。
+	m0 := map[*struct{ dynamic, strong bool }]*map[string]int{}
+	for category, langInfo := range langs {
+		m0[&category] = &langInfo
+		// 下面这行修改对映射langs没有任何影响。
+		category.dynamic, category.strong = true, true
+	}
+	for category, langInfo := range langs {
+		fmt.Println(category, langInfo)
+	}
+
+	m1 := map[struct{ dynamic, strong bool }]map[string]int{}
+	for category, langInfo := range m0 {
+		m1[*category] = *langInfo
+	}
+	// 映射m0和m1中均只有一个条目。
+	fmt.Println(len(m0), len(m1)) // 1 1
+	fmt.Println(m1)               // map[{true true}:map[C:1972]]
+}
+
+type Buffer struct {
+	start, end int
+	data       [1024]byte
+}
+
+func fa(buffers []Buffer) int {
+	numUnreads := 0
+	for _, buf := range buffers {
+		numUnreads += buf.end - buf.start
+	}
+	return numUnreads
+}
+
+func fb(buffers []Buffer) int {
+	numUnreads := 0
+	for i := range buffers {
+		numUnreads += buffers[i].end - buffers[i].start
+	}
+	return numUnreads
+}
+
+func init() {
+	var a [100]int
+
+	for i, n := range &a { // 复制一个指针的开销很小
+		fmt.Println(i, n)
+	}
+
+	for i, n := range a[:] { // 复制一个切片的开销很小
+		fmt.Println(i, n)
+	}
+}
+
+func init() {
+	var p *[5]int // nil
+
+	for i, _ := range p { // okay
+		fmt.Println(i)
+	}
+
+	for i := range p { // okay
+		fmt.Println(i)
+	}
+
+	//for i, n := range p { // panic
+	//	fmt.Println(i, n)
+	//}
+}
+
+func init() {
+	a := [5]int{2, 3, 5, 7, 11}
+	p := &a
+	p[0], p[1] = 17, 19
+	fmt.Println(a) // [17 19 5 7 11]
+	p = nil
+	//_ = p[0] // panic
+}
+
+func init() {
+	pa := &[5]int{2, 3, 5, 7, 11}
+	s := pa[1:3]
+	fmt.Println(s) // [3 5]
+	pa = nil
+	//s = pa[0:0] // panic
+	// 如果下一行能被执行到，则它也会产生恐慌。
+	//_ = (*[0]byte)(nil)[:]
+}
+
+func init() {
+	var pa *[5]int                // == nil
+	fmt.Println(len(pa), cap(pa)) // 5 5
+}
+
+func init() {
+	var a [5]int
+	var p *[7]string
+
+	// N和M都是类型为int的类型确定值。
+	const N = len(a)
+	const M = cap(p)
+
+	fmt.Println(N) // 5
+	fmt.Println(M) // 7
+}
+
+func init() {
+	s := make([]int, 2, 6)
+	fmt.Println(len(s), cap(s)) // 2 6
+
+	reflect.ValueOf(&s).Elem().SetLen(3)
+	fmt.Println(len(s), cap(s)) // 3 6
+
+	reflect.ValueOf(&s).Elem().SetCap(5)
+	fmt.Println(len(s), cap(s)) // 3 5
+}
+
+func init() {
+	s := make([]int, 2, 6)
+	sClone := append(s[:0:0], s...)
+	sClone = append([]int(nil), s...)
+	_ = sClone
+}
+
+func init() {
+	s := make([]int, 2, 6)
+	// 两行make+copy实现：
+	sClone := make([]int, len(s))
+	copy(sClone, s)
+
+	// 或者下面的make+append实现。
+	// 对于目前的官方Go工具链v1.17来说，这种
+	// 实现比上面的make+copy实现略慢一点。
+	sClone = append(make([]int, 0, len(s)), s...)
+	_ = sClone
+}
+
+func init() {
+	s := make([]int, 2, 6)
+	var sClone []int
+	if s != nil {
+		sClone = make([]int, len(s))
+		copy(sClone, s)
+	}
+}
+
+func init() {
+	// 情况一：
+	var s = make([]byte, 10000)
+	var y = make([]byte, len(s)) // works
+	copy(y, s)
+
+	// 情况二：
+	s = make([]byte, 10000)
+	y = make([]byte, len(s), len(s)) // not work
+	copy(y, s)
+
+	// 情况三：
+	var a = [1][]byte{s}
+	y = make([]byte, len(a[0])) // not work
+	copy(y, a[0])
+	// 情况四：
+	type T struct{ x []byte }
+	var t = T{x: s}
+	y = make([]byte, len(t.x)) // not work
+	copy(y, t.x)
+}
+
+func init() {
+	//// 第一种方法（保持剩余元素的次序）：
+	//s = append(s[:from], s[to:]...)
+	//
+	//// 第二种方法（保持剩余元素的次序）：
+	//s = s[:from + copy(s[from:], s[to:])]
+	//
+	//// 第三种方法（不保持剩余元素的次序）：
+	//if n := to-from; len(s)-to < n {
+	//	copy(s[from:to], s[to:])
+	//} else {
+	//	copy(s[from:to], s[len(s)-n:])
+	//}
+	//s = s[:len(s)-(to-from)]
+}
+
+func init() {
+	// "len(s)+to-from"是删除操作之前切片s的长度。
+	//temp := s[len(s):len(s)+to-from]
+	//for i := range temp {
+	//	temp[i] = t0
+	//}
+}
+
+func init() {
+	//// 第一种方法（保持剩余元素的次序）：
+	//s = append(s[:i], s[i+1:]...)
+	//
+	//// 第二种方法（保持剩余元素的次序）：
+	//s = s[:i + copy(s[i:], s[i+1:])]
+	//
+	//// 上面两种方法都需要复制len(s)-i-1个元素。
+	//
+	//// 第三种方法（不保持剩余元素的次序）：
+	//s[i] = s[len(s)-1]
+	//s = s[:len(s)-1]
+}
+
+// 假设T是一个小尺寸类型。
+func DeleteElements(s []int, keep func(int2 int) bool, clear bool) []int {
+	// result := make([]T, 0, len(s))
+	result := s[:0] // 无须开辟内存
+	for _, v := range s {
+		if keep(v) {
+			result = append(result, v)
+		}
+	}
+	if clear { // 避免暂时性的内存泄露。
+		temp := s[len(result):]
+		for i := range temp {
+			temp[i] = 0 // t0是类型T的零值
+		}
+	}
+	return result
+}
+
+func init() {
+	//// 第一种方法:单行实现。
+	//s = append(s[:i], append(elements, s[i:]...)...)
+	//
+	//// 上面这种单行实现把s[i:]中的元素复制了两次，并且它可能
+	//// 最多导致两次内存开辟（最少一次）。
+	//// 下面这种繁琐的实现只把s[i:]中的元素复制了一次，并且
+	//// 它最多只会导致一次内存开辟（最少零次）。
+	//// 但是，在当前的官方标准编译器实现中（1.17版本），此
+	//// 繁琐实现中的make调用将会把一些刚开辟出来的元素清零。
+	//// 这其实是没有必要的。所以此繁琐实现并非总是比上面的
+	//// 单行实现效率更高。事实上，它仅在处理小切片时更高效。
+	//
+	//if cap(s) >= len(s) + len(elements) {
+	//	s = s[:len(s)+len(elements)]
+	//	copy(s[i+len(elements):], s[i:])
+	//	copy(s[i:], elements)
+	//} else {
+	//	x := make([]T, 0, len(elements)+len(s))
+	//	x = append(x, s[:i]...)
+	//	x = append(x, elements...)
+	//	x = append(x, s[i:]...)
+	//	s = x
+	//}
+	//
+	//// Push（插入到结尾）。
+	//s = append(s, elements...)
+	//
+	//// Unshift（插入到开头）。
+	//s = append(elements, s...)
+}
+
+func init() {
+	//// 前弹出（pop front，又称shift）
+	//s, e = s[1:], s[0]
+	//// 后弹出（pop back）
+	//s, e = s[:len(s)-1], s[len(s)-1]
+	//// 前推（push front）
+	//s = append([]T{e}, s...)
+	//// 后推（push back）
+	//s = append(s, e)
 }
 
 func main() {
