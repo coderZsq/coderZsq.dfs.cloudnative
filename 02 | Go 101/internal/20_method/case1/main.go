@@ -76,3 +76,44 @@ func init() {
 //	return Book.Pages(*b)
 //}
 
+func init() {
+	var book Book
+
+	fmt.Printf("%T \n", book.Pages)       // func() int
+	fmt.Printf("%T \n", (&book).SetPages) // func(int)
+	// &book值有一个隐式方法Pages。
+	fmt.Printf("%T \n", (&book).Pages)    // func() int
+
+	// 调用这三个方法。
+	(&book).SetPages(123)
+	book.SetPages(123)           // 等价于上一行
+	fmt.Println(book.Pages())    // 123
+	fmt.Println((&book).Pages()) // 123
+}
+
+func (age *Age) IsNil() bool {
+	return age == nil
+}
+
+func init() {
+	_ = (StringSet(nil)).Has   // 不会产生恐慌
+	_ = ((*Age)(nil)).IsNil    // 不会产生恐慌
+	_ = ((*Age)(nil)).Increase // 不会产生恐慌
+
+	_ = (StringSet(nil)).Has("key") // 不会产生恐慌
+	_ = ((*Age)(nil)).IsNil()       // 不会产生恐慌
+
+	// 下面这行将产生一个恐慌，但是此恐慌不是在调用方法的时
+	// 候产生的，而是在此方法体内解引用空指针的时候产生的。
+	//((*Age)(nil)).Increase()
+}
+
+func init() {
+	var b Book
+	b.SetPages(123)
+	fmt.Println(b.pages) // 0
+}
+
+func main() {
+
+}
