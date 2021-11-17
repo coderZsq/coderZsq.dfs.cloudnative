@@ -4,5 +4,3 @@
 
 - [Go 语言 101 - Go 语言 101（通俗版 Go 白皮书） (go101.org)](https://gfw.go101.org/article/101.html)
 
-## Reference
-
