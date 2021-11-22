@@ -14,12 +14,10 @@ func SayGreetings(greeting string, times int) {
 	}
 }
 
-func init() {
+func main() {
 	rand.Seed(time.Now().UnixNano())
 	log.SetFlags(0)
 	go SayGreetings("hi!", 10)
 	go SayGreetings("hello!", 10)
 	time.Sleep(2 * time.Second)
 }
-
-func main() {}

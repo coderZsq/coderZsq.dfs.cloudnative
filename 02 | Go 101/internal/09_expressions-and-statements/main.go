@@ -1,11 +1,10 @@
 package main
 
+import "time"
+
 var a = 123
-
 const B = "Go"
-
 type Choice bool
-
 func f() int {
 	for a < 10 {
 		break
@@ -28,20 +27,22 @@ func main() {
 	a--
 	c <- true // 一个通道发送操作
 	z := <-c  // 一个使用通道接收操作
-	// 做为源值的变量短声明语句
+			  // 做为源值的变量短声明语句
 
 	// 一些表达式的例子：
-	println(123)
-	println(true)
-	println(B)
-	println(B + " language")
-	println(a - 789)
-	println(a > 0) // 一个类型不确定布尔值
-	println(f)     // 一个类型为“func ()”的表达式
+	_ = 123
+	_ = true
+	_ = B
+	_ = B + " language"
+	_ = a - 789
+	_ = a > 0 // 一个类型不确定布尔值
+	_ = f     // 一个类型为“func ()”的表达式
 
 	// 下面这些即可以被视为简单语句，也可以被视为表达式。
 	f() // 函数调用
 	<-c // 通道接收操作
 
 	_ = z
+	_ = time.Now()
 }
+
