@@ -1,16 +1,31 @@
 package main
 
-type I interface {
-	m()
+type A struct {
+	x string
+}
+func (A) y(int) bool {
+	return false
 }
 
-type T struct {
-	I
+type B struct {
+	y bool
+}
+func (B) x(string) {}
+
+type C struct {
+	B
+}
+
+var v1 struct {
+	A
+	B
+}
+
+func f1() {
+	_ = v1.x // error: 模棱两可的v1.x
+	_ = v1.y // error: 模棱两可的v1.y
 }
 
 func main() {
-	var t T
-	var i = &t
-	t.I = i
-	i.m() // 将调用t.m()，然后再次调用i.m()，......
+
 }

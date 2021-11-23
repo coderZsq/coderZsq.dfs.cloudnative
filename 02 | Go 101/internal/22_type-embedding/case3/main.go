@@ -1,31 +1,28 @@
 package main
 
-type x string
-func (x) M() {}
+import "fmt"
 
-type y struct {
-	z byte
+type Person struct {
+	Name string
+	Age  int
+}
+func (p Person) PrintName() {
+	fmt.Println("Name:", p.Name)
+}
+func (p *Person) SetAge(age int) {
+	p.Age = age
 }
 
-type A struct {
-	x
+type Singer struct {
+	Person // 通过内嵌Person类型来扩展之
+	works  []string
 }
-func (A) y(int) bool {
-	return false
-}
-
-type B struct {
-	y
-}
-func (B) x(string) {}
 
 func main() {
-	var v struct {
-		A
-		B
-	}
-	//_ = v.x // error: 模棱两可的v.x
-	//_ = v.y // error: 模棱两可的v.y
-	_ = v.M // ok. <=> v.A.x.M
-	_ = v.z // ok. <=> v.B.y.z
+	var gaga = Singer{Person: Person{"Gaga", 30}}
+	gaga.PrintName() // Name: Gaga
+	gaga.Name = "Lady Gaga"
+	(&gaga).SetAge(31)
+	(&gaga).PrintName()   // Name: Lady Gaga
+	fmt.Println(gaga.Age) // 31
 }
