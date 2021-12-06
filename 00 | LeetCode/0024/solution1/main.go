@@ -19,7 +19,9 @@ func done(head *ListNode) bool {
 // 1 -> 2 -> 3 -> nil
 func swap(one *ListNode) *ListNode {
 	two := one.Next
+	// 1 -> 3 -> nil
 	one.Next = swapPairs(two.Next)
+	// 2 -> 1 -> 3 -> nil
 	two.Next = one
 	return two
 }
