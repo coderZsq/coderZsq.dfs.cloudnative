@@ -1,6 +1,6 @@
 package single_linkedlist
 
 type ListNode struct {
-	Val int
+	Val  int
 	Next *ListNode
 }

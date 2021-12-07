@@ -1,19 +1,13 @@
 package solution1
 
-import (
-	. "_/definition/single-linkedlist"
-)
+import . "_/structures/single-linkedlist"
 
 func swapPairs(head *ListNode) *ListNode {
-	if done(head) {
+	if head == nil || head.Next == nil {
 		return head
 	} else {
 		return swap(head)
 	}
-}
-
-func done(head *ListNode) bool {
-	return head == nil || head.Next == nil
 }
 
 // 1 -> 2 -> 3 -> nil

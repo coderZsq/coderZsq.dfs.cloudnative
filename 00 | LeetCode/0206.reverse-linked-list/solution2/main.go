@@ -1,11 +1,9 @@
 package solution2
 
-import (
-	. "_/definition/single-linkedlist"
-)
+import . "_/structures/single-linkedlist"
 
 func reverseList(head *ListNode) *ListNode {
-	if done(head) {
+	if head == nil || head.Next == nil {
 		return head
 	} else {
 		return reverse(head)
@@ -28,8 +26,4 @@ func reverse(one *ListNode) *ListNode {
 		one = two
 	}
 	return newHead
-}
-
-func done(head *ListNode) bool {
-	return head == nil || head.Next == nil
 }
