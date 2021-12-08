@@ -21,12 +21,14 @@ func reverse(node *ListNode, k *ListNode) *ListNode {
 
 	for node != k {
 		next := node.Next
-
-		node.Next = newHead
-		newHead = node
-
+		rebind(&node, &newHead)
 		node = next
 	}
 
 	return newHead
+}
+
+func rebind(node **ListNode, newHead **ListNode)  {
+	(*node).Next = *newHead
+	*newHead = *node
 }

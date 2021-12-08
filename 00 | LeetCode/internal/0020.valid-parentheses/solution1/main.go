@@ -1,33 +1,47 @@
 package solution1
 
-func isValid(s string) bool {
-	var stack []rune
+type MyStack struct {
+	container []rune
+}
 
+func (this *MyStack) Push(x rune) {
+	this.container = append(this.container, x)
+}
+
+func (this *MyStack) Pop() rune {
+	top := this.Top()
+	this.container = this.container[:len(this.container)-1]
+	return top
+}
+
+func (this *MyStack) Top() rune {
+	top := this.container[len(this.container)-1]
+	return top
+}
+
+func (this *MyStack) Empty() bool {
+	return len(this.container) <= 0
+}
+
+func isValid(s string) bool {
+	stack := &MyStack{[]rune{}}
 	for _, parentheses := range s {
 		switch parentheses {
 		case '(':
-			stack = append(stack, ')')
+			stack.Push(')')
 		case '{':
-			stack = append(stack, '}')
+			stack.Push('}')
 		case '[':
-			stack = append(stack, ']')
+			stack.Push(']')
 		case ')', '}', ']':
-			stackSize := len(stack)
-
-			if empty(stack) {
+			if stack.Empty() {
 				return false
 			}
-
-			if parentheses != stack[stackSize-1] {
+			if parentheses != stack.Top() {
 				return false
 			}
-
-			stack = stack[:stackSize-1]
+			stack.Pop()
 		}
 	}
-	return empty(stack)
-}
-
-func empty(stack []rune) bool {
-	return len(stack) == 0
+	return stack.Empty()
 }

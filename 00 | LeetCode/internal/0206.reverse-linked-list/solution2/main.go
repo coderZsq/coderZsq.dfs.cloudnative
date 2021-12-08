@@ -10,20 +10,21 @@ func reverseList(head *ListNode) *ListNode {
 	}
 }
 
-// 1 -> 2 -> 3 -> 4 -> 5
-func reverse(one *ListNode) *ListNode {
-	// nil
+func reverse(node *ListNode) *ListNode {
 	var newHead *ListNode
-	for one != nil {
-		two := one.Next
-		// 1 -> nil
-		// 2 -> 1 -> nil
-		one.Next = newHead
-		// newHead 1
-		// newHead 2
-		newHead = one
-
-		one = two
+	for node != nil {
+		next := node.Next
+		rebind(&node, &newHead)
+		node = next
 	}
 	return newHead
+}
+
+func rebind(node **ListNode, newHead **ListNode) {
+	// 1 -> nil
+	// 2 -> 1 -> nil
+	(*node).Next = *newHead
+	// newHead 1
+	// newHead 2
+	*newHead = *node
 }

@@ -6,12 +6,12 @@ func swapPairs(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	} else {
-		return swap(head)
+		return rebind(head)
 	}
 }
 
 // 1 -> 2 -> 3 -> nil
-func swap(one *ListNode) *ListNode {
+func rebind(one *ListNode) *ListNode {
 	two := one.Next
 	// 1 -> 3 -> nil
 	one.Next = swapPairs(two.Next)
