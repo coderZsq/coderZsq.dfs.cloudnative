@@ -1,55 +1,67 @@
 package solution1
 
+type MyQueue struct {
+	container []int
+}
+
+func (this *MyQueue) Offer(x int) {
+	this.container = append(this.container, x)
+}
+
+func (this *MyQueue) Poll() int {
+	peek := this.Peek()
+	this.container = this.container[1:]
+	return peek
+}
+
+func (this *MyQueue) Peek() int {
+	peek := this.container[0]
+	return peek
+}
+
+func (this *MyQueue) Empty() bool {
+	return len(this.container) <= 0
+}
+
+func (this *MyQueue) Size() int {
+	return len(this.container)
+}
+
 type MyStack struct {
-	queue1, queue2 []int
+	queue, support MyQueue
 }
 
 func Constructor() MyStack {
 	return MyStack{
-		queue1: []int{},
-		queue2: []int{},
+		queue:   MyQueue{},
+		support: MyQueue{},
 	}
 }
 
 func (this *MyStack) Push(x int) {
-	this.queue2OfferTail(x)
-	this.pollQueue1HeadOfferToQueue2Tail()
-	this.swapQueues()
+	this.support.Offer(x)
+	this.transferSupport2Queue()
+	this.swapSupportAndQueue()
 }
 
 func (this *MyStack) Pop() int {
-	top := this.queue1[0]
-	this.queue1Poll()
-	return top
+	return this.queue.Poll()
 }
 
 func (this *MyStack) Top() int {
-	return this.queue1[0]
+	return this.queue.Peek()
 }
 
 func (this *MyStack) Empty() bool {
-	return len(this.queue1) == 0
+	return this.queue.Empty()
 }
 
-func (this *MyStack) queue2OfferTail(x int) {
-	this.queue2 = append(this.queue2, x)
-}
-
-func (this *MyStack) pollQueue1HeadOfferToQueue2Tail() {
-	for this.queue1NotEmpty() {
-		this.queue2OfferTail(this.queue1[0])
-		this.queue1Poll()
+func (this *MyStack) transferSupport2Queue() {
+	for !this.queue.Empty() {
+		this.support.Offer(this.queue.Poll())
 	}
 }
 
-func (this *MyStack) queue1NotEmpty() bool {
-	return len(this.queue1) > 0
-}
-
-func (this *MyStack) queue1Poll() {
-	this.queue1 = this.queue1[1:]
-}
-
-func (this *MyStack) swapQueues() {
-	this.queue1, this.queue2 = this.queue2, this.queue1
+func (this *MyStack) swapSupportAndQueue() {
+	this.queue, this.support = this.support, this.queue
 }

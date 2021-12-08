@@ -1,47 +1,62 @@
 package solution2
 
+type MyQueue struct {
+	container []int
+}
+
+func (this *MyQueue) Offer(x int) {
+	this.container = append(this.container, x)
+}
+
+func (this *MyQueue) Poll() int {
+	peek := this.Peek()
+	this.container = this.container[1:]
+	return peek
+}
+
+func (this *MyQueue) Peek() int {
+	peek := this.container[0]
+	return peek
+}
+
+func (this *MyQueue) Empty() bool {
+	return len(this.container) <= 0
+}
+
+func (this *MyQueue) Size() int {
+	return len(this.container)
+}
+
 type MyStack struct {
-	queue []int
+	queue MyQueue
 }
 
 func Constructor() MyStack {
 	return MyStack{
-		queue: []int{},
+		queue: MyQueue{},
 	}
 }
 
 func (this *MyStack) Push(x int) {
-	queueSize := len(this.queue)
-	this.queueOfferTail(x)
-	this.pollQueueHeadOfferToQueueTail(queueSize)
+	size := this.queue.Size()
+	this.queue.Offer(x)
+	this.transferRange(size)
 }
 
 func (this *MyStack) Pop() int {
-	queueHead := this.queue[0]
-	this.queuePollHead()
-	return queueHead
+	return this.queue.Poll()
 }
 
 func (this *MyStack) Top() int {
-	return this.queue[0]
+	return this.queue.Peek()
 }
 
 func (this *MyStack) Empty() bool {
-	return len(this.queue) == 0
+	return this.queue.Empty()
 }
 
-func (this *MyStack)pollQueueHeadOfferToQueueTail(size int)  {
+func (this *MyStack) transferRange(size int) {
 	for i := 0; i < size; i++ {
-		queueHead := this.queue[0]
-		this.queuePollHead()
-		this.queueOfferTail(queueHead)
+		this.queue.Offer(this.queue.Poll())
 	}
-}
-
-func (this *MyStack)queuePollHead()  {
-	this.queue = this.queue[1:]
-}
-
-func (this *MyStack) queueOfferTail(x int)  {
-	this.queue = append(this.queue, x)
 }
