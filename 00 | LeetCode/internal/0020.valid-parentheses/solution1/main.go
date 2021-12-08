@@ -3,8 +3,8 @@ package solution1
 func isValid(s string) bool {
 	var stack []rune
 
-	for _, parenthesis := range s {
-		switch parenthesis {
+	for _, parentheses := range s {
+		switch parentheses {
 		case '(':
 			stack = append(stack, ')')
 		case '{':
@@ -18,7 +18,7 @@ func isValid(s string) bool {
 				return false
 			}
 
-			if parenthesis != stack[stackSize-1] {
+			if parentheses != stack[stackSize-1] {
 				return false
 			}
 
