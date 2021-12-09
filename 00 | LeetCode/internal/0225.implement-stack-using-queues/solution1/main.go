@@ -20,7 +20,7 @@ func (this *MyQueue) Peek() int {
 }
 
 func (this *MyQueue) Empty() bool {
-	return len(this.container) <= 0
+	return this.Size() <= 0
 }
 
 func (this *MyQueue) Size() int {
@@ -28,13 +28,13 @@ func (this *MyQueue) Size() int {
 }
 
 type MyStack struct {
-	queue, support MyQueue
+	queue, support *MyQueue
 }
 
 func Constructor() MyStack {
 	return MyStack{
-		queue:   MyQueue{},
-		support: MyQueue{},
+		queue:   &MyQueue{},
+		support: &MyQueue{},
 	}
 }
 

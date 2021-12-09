@@ -24,13 +24,13 @@ func (this *MyStack) Empty() bool {
 }
 
 type MyQueue struct {
-	input, output MyStack
+	input, output *MyStack
 }
 
 func Constructor() MyQueue {
 	return MyQueue{
-		input:  MyStack{},
-		output: MyStack{},
+		input:  &MyStack{},
+		output: &MyStack{},
 	}
 }
 
