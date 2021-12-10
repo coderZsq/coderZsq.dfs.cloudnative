@@ -35,12 +35,7 @@ func (this *MyHeap) Len() int {
 func maxSlidingWindow(nums []int, k int) []int {
 	max := &MyHeap{IntSlice: []int{}, k: k}
 	var result []int
-
-	for i := 0; i < k; i++ {
-		heap.Push(max, nums[i])
-	}
-	result = append(result, max.Peek())
-
+	preKProcess(&result, max, nums)
 	for i := k; i < len(nums); i++ {
 		index := findIdxIn(max.IntSlice, nums[i-k])
 		heap.Remove(max, index)
@@ -50,8 +45,20 @@ func maxSlidingWindow(nums []int, k int) []int {
 	return result
 }
 
+func preKProcess(result *[]int, max *MyHeap, nums []int) {
+	*result = append(*result, findTopK(max, nums))
+}
+
+func findTopK(max *MyHeap, nums []int) (peek int) {
+	for i := 0; i < max.k; i++ {
+		heap.Push(max, nums[i])
+	}
+	peek = max.Peek()
+	return
+}
+
 func findIdxIn(arr []int, poll int) (index int) {
-	for i:= 0; i < len(arr); i++ {
+	for i := 0; i < len(arr); i++ {
 		if arr[i] == poll {
 			index = i
 		}

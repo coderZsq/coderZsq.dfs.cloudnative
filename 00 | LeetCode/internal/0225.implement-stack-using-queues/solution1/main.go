@@ -39,8 +39,12 @@ func Constructor() MyStack {
 }
 
 func (this *MyStack) Push(x int) {
-	this.support.Offer(x)
-	this.transferSupport2Queue()
+	this.support.Offer(x)	
+
+	for !this.queue.Empty() {
+		this.transferQueue2Support()
+	}
+
 	this.swapSupportAndQueue()
 }
 
@@ -56,10 +60,8 @@ func (this *MyStack) Empty() bool {
 	return this.queue.Empty()
 }
 
-func (this *MyStack) transferSupport2Queue() {
-	for !this.queue.Empty() {
+func (this *MyStack) transferQueue2Support() {
 		this.support.Offer(this.queue.Poll())
-	}
 }
 
 func (this *MyStack) swapSupportAndQueue() {
