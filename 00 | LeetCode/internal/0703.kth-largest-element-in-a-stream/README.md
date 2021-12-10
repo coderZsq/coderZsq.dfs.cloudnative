@@ -2,6 +2,8 @@
 
 ### 题目描述
 
+- https://leetcode-cn.com/problems/kth-largest-element-in-a-stream/
+
 设计一个找到数据流中第 k 大元素的类（class）。注意是排序后的第 k 大元素，不是第 k 个不同的元素。
 
 请实现 KthLargest  类：
