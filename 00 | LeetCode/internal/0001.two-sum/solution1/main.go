@@ -1,12 +1,14 @@
 package solution1
 
 func twoSum(nums []int, target int) []int {
-	hashTable := map[int]int{}
-	for i, x := range nums {
-		if p, ok := hashTable[target-x]; ok {
-			return []int{p, i}
+	for i := 0; i < len(nums)-1; i++ {
+		a := nums[i]
+		for j := i + 1; j < len(nums); j++ {
+			b := nums[j]
+			if a+b == target {
+				return []int{i, j}
+			}
 		}
-		hashTable[x] = i
 	}
 	return nil
 }
