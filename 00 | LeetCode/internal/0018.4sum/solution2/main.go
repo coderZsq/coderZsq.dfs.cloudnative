@@ -1,7 +1,6 @@
-package solution1
+package solution2
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -21,19 +20,19 @@ func fourSum(nums []int, target int) [][]int {
 			if j > i+1 && b == nums[j-1] { // 去重 b
 				continue
 			}
-			for k := j + 1; k < len(nums)-1; k++ {
+			hashTable := map[int]struct{}{}
+			for k := j + 1; k < len(nums); k++ {
 				c := nums[k]
-				if k > j+1 && c == nums[k-1] { // 去重 c
+				if k > j+2 && c == nums[k-1] && nums[k-1] == nums[k-2] { // 去重 c
 					continue
 				}
-				for l := k + 1; l < len(nums); l++ {
-					d := nums[l]
-					if l > k+1 && d == nums[l-1] { // 去重 d
-						continue
-					}
-					if a+b+c+d == target {
-						result = append(result, []int{a, b, c, d})
-					}
+
+				d := target - (a + b + c)
+				if _, ok := hashTable[d]; ok {
+					result = append(result, []int{a, b, c, d})
+					delete(hashTable, d) // 去重 d
+				} else {
+					hashTable[c] = struct{}{}
 				}
 			}
 		}
@@ -41,6 +40,3 @@ func fourSum(nums []int, target int) [][]int {
 	return result
 }
 
-func main() {
-	fmt.Print(fourSum([]int{1, 0, -1, 0, -2, 2}, 0))
-}

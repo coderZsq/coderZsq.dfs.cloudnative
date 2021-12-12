@@ -10,7 +10,8 @@ func threeSum(nums []int) [][]int {
 	}
 	sort.Ints(nums)
 	var result [][]int
-	for i, a := range nums[:len(nums)-2] {
+	for i := 0; i < len(nums)-2; i++ {
+		a := nums[i]
 		if i > 0 && a == nums[i-1] { // 去重 a
 			continue
 		}
