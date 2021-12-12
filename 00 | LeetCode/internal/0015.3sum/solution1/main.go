@@ -1,7 +1,6 @@
-package main
+package solution1
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -11,29 +10,26 @@ func threeSum(nums []int) [][]int {
 	}
 	sort.Ints(nums)
 	var result [][]int
-	for i, a := range nums[:len(nums)-2] {
+	for i := 0; i < len(nums)-2; i++ {
+		a := nums[i]
 		if i > 0 && a == nums[i-1] { // 去重 a
 			continue
 		}
-		hashTable := map[int]struct{}{}
-		for j := i + 1; j < len(nums); j++ {
+		for j := i + 1; j < len(nums)-1; j++ {
 			b := nums[j]
-			if j > i+2 && b == nums[j-1] && nums[j-1] == nums[j-2] { // 去重 b
+			if j > i + 1 && b == nums[j-1] { // 去重 b
 				continue
 			}
-
-			c := -(a + b)
-			if _, ok := hashTable[c]; ok {
-				result = append(result, []int{a, b, c})
-				delete(hashTable, c) // 去重 c
-			} else {
-				hashTable[b] = struct{}{}
+			for k := j + 1; k < len(nums); k++ {
+				c := nums[k]
+				if k > j + 1 && c == nums[k-1] { // 去重 c
+					continue
+				}
+				if a+b+c == 0 {
+					result = append(result, []int{a, b, c})
+				}
 			}
 		}
 	}
 	return result
-}
-
-func main() {
-	fmt.Println(threeSum([]int{2, -2, 2, -2, 2, -2, 2, -2, 0}))
 }
